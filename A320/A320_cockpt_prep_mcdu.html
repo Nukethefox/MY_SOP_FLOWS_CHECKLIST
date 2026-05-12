@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A320 MCDU</title>
+        <link rel="stylesheet" href="../styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+<h1>A320 MCDU</h1>
+<section class="checklist">
+    <p style="font-size: 24px;"><b>DIFSRIP CONCEPT</b></p>
+    <div class="row"><span class="item">DATA</span><span class="dots"></span><span class="action">CHECK A/C STATUS, DATABASE</span></div>
+    <div class="row"><span class="item">INIT A</span><span class="dots"></span><span class="action">SET</span></div>
+    <div class="row"><span class="item">F-PLN</span><span class="dots"></span><span class="action">CREATE</span></div>
+    <details class="checklist_notes">
+        <summary>Detailed explanation:</summary>
+        <p>- Select <b>SID</b>: LAT REV on departure -> RWY -> SID -> TMPY INSERT</p>
+        <p>- Select <b>airways</b>: LAT REV on last SID's waypoint -> AIRWAYS -> write airways and waypoints -> TMPY INSERT</p>
+        <p>- Select <b>STAR</b>: LAT REV on arrival -> APPR -> STAR -> TMPY INSERT</p>
+        <p>- Check <b>CSTR</b></p>
+        <p>About the discontinuities:<br>- Sometimes, you will find a discontinuity between the STAR and the APPR. This is because you will need ATC Vectors to fly that part. If you do nothing when reaching the waypoint before the discontinuity, the aircraft will continue flying on present heading indefinitely.<br>- You should use HEADING or DIR TO. It is usually not a good idea to clear the discontinuity.</p>
+    </details>
+    <div class="row"><span class="item">SEC F-PLN</span><span class="dots"></span><span class="action">CREATE</span></div>
+    <details class="checklist_notes">
+        <summary>Detailed explanation:</summary>
+        <p>If we don't have any E/O SID Chart, we can create one ourselves. For example, climb on rwy heading, turn to downwind, then fly to an IAF. You can create a different one based on your criteria, surrounding terrain, MSA...</p>
+        <p>1. COPY ACTIVE</p>
+        <p>2. Create "climb on rwy heading": Choose a point near the runway (VOR on airport) or the airport ICAO itself, write <b>POINT/BRG/DIST</b> and insert it below the departure runway. For Example LEGE/194/10 will create a waypoint 10NM out from LEGE RWY 19 heading.</p>
+        <p>3. Create turn to downwind. To create a waypoint, we will reference the last one. For example PBD01/284/5 will create a second waypoint 5NM 90º to the right of the previous one, being the crosswind leg. PBD02/014/10 will create the downwind leg, and so on. At any moment, you can write the name of an actual waypoint, navaid or IAF.</p>
+        <p>Using this method you can create as many waypoints as you consider. When you have an emergency, you will be able to fly them by just activating the SEC F-PLAN.</p>
+        <br>
+        <p>4. Now, selecting LAT REV on our last waypoint, we will select <b>NEW ARR</b>.</p>
+        <p>5. Selecting LAT REV on the new arrival we can select our <b>APPROACH</b>.</p>
+        <p>6. Finally we can enter any necessary data on the <b>APP PERF</b> PAGE.</p>
+        <br>
+    </details>
+    <div class="row"><span class="item">RAD NAV</span><span class="dots"></span><span class="action">CHECK AUTO-TUNED FRQS</span></div>
+    <div class="row"><span class="item">INIT-B</span><span class="dots"></span><span class="action">SET</span></div>
+    <details class="checklist_notes">
+        <summary>Detailed explanation:</summary>
+        <p>1. Set ZFW and BLOCK according to flightplan, and ZFWCG according to your sim/addon fuel panel.</p>
+        <p>(Every Sim/addon is different. Some of them will calculate these values automatically. Else, you will usually find the ZFWCG on the same place where you inserted your fuel and pax during <a style="color: #cecece;" href="A320_boarding.html">boarding</a> phase)</p>
+        <p>2. Adjust fuel info according to flightplan (taxi, route reserve, final reserve).</p>
+    </details>
+    <div class="row"><span class="item">PERF</span><span class="dots"></span><span class="action">SET</span></div>
+    <details class="checklist_notes">
+        <summary>Detailed explanation:</summary>
+        <p>About <b>FLEX TEMP and Vspeeds</b>: Here, every Sim/addon works also differently. Most of them will have a dedicated panel where it will tell you everything (Fenix, FBW, Toliss...). Some of them will send you the data directly as a "company message".</p>
+        <p>- Please reffer to your addon manual for this part. On Aerosoft, for example, it will automatically calculate these values as soon as FLAPS is set.</p>
+        <p>If your aircraft does not have an integrated PERF CALCULATOR, you can use <a href="https://dispatch.simbrief.com/tools" target="_blank" style="color: white;">SimBrief's PERF TOOL</a>.</p>
+        <p>- <b>TRANS ALT depends on your airport</b> , check charts. <br>- <b>THR RED/ACC will depend on the NADP</b> in use: for NADP2 = usually 1500 AAL both. For NADP1 = THR RED 1500, ACC 3000 AAL. <br>- Check Charts for NADP in use.<br>- <b>ENG OUT ACC</b> is uauslly the same as THR RED, 1500 AAL.</p>
+        <p>About THS position... if your aircraft does not calculate it automatically, you will need the Takeoff Weight CG and the following chart:</p>
+        <p><img src="A320imgs/TRIM_POS.jpg" style="width: 70%;"></p>
+        <p>If we go into the CLB PAGE, we can also set a <b>PRESEL</b> SPEED, useful if we want to keep a lower speed during early climb, instead of aiming directly for standard speed (250KT). <br>This is commonly used on <b>SID's sharp turns</b>, airspace shared with VFR traffic... and we can use our clean speed.<br> Whenever we are climbing and we want to get rid of our PRESEL, we just have to push the speed knob on the FCU and engage managed speed mode.</p>
+    </details>
+
+
+</section>
+<script src="../script.js"></script>
+</body>
+<footer>
+    <p style="text-align: center;"><a class="boton_seccion" href="A320_cockpit_prep_2.html">Go to Cockpit Preparation - 2</a></p>
+    <p style="text-align: center;"><a class="boton_seccion" href="A320_cockpt_prep_1.html">PREVIOUS SECTION</a><a class="boton_seccion" href="../A320_index.html">SECTIONS INDEX</a></p>
+    <p style="text-align: center; color: white; font-size: 18px;"><b>DO NOT USE FOR REAL LIFE FLIGHT - ONLY SIMULATOR!</b></p>
+</footer>
+</html>
+

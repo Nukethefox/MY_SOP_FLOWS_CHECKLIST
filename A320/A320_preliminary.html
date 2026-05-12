@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A320 PRE COCKPIT PREP</title>
+        <link rel="stylesheet" href="../styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+<h1>A320 PRELIMINARY COCKPIT PREPARATION FLOWS</h1>
+<section class="checklist">
+    <div class="row"><span class="item">PARK BRK</span><span class="dots"></span><span class="action">ON</span></div>
+    <div class="row"><span class="item">ENG MASTERS</span><span class="dots"></span><span class="action">OFF</span></div>
+    <div class="row"><span class="item">ENG MODE SEL</span><span class="dots"></span><span class="action">NORM</span></div>
+    <div class="row"><span class="item">WX RADAR</span><span class="dots"></span><span class="action">OFF</span></div>
+    <div class="row"><span class="item">PWS</span><span class="dots"></span><span class="action">OFF</span></div>
+    <div class="row"><span class="item">THRUST LEVERS</span><span class="dots"></span><span class="action">IDLE</span></div>
+    <div class="row"><span class="item">FLAPS/SPD BRKS LEVERS</span><span class="dots"></span><span class="action">0/RET/DISARM</span></div>
+    <div class="row"><span class="item">L/G LEVER</span><span class="dots"></span><span class="action">DOWN</span></div>
+    <div class="row"><span class="item">WIPERS</span><span class="dots"></span><span class="action">OFF</span></div>
+    <br>
+    <hr>
+    <br>
+    <div class="row"><span class="item">BATT 1 & 2 VOLTAGE</span><span class="dots"></span><span class="action">AT OR ABOVE 25.5V</span></div>
+    <details class="checklist_notes"><summary>If below 25.5V -> charge</summary><p>Charge for 20 minutes, with BATTERIES ON and EXT PWR ON.<br> Then check again: Batteries OFF then ON, and they should not drop from 25.5V (if so, call maintenance).</p></details>
+    <div class="row"><span class="item">BATT 1 & 2</span><span class="dots"></span><span class="action">ON</span></div>
+    <div class="row"><span class="item">EXT PWR</span><span class="dots"></span><span class="action">ON</span></div>
+    <div class="row"><span class="item">NAV LIGHTS</span><span class="dots"></span><span class="action">ON</span></div>
+    <div class="row"><span class="item">ADIRS IR 1, 2, 3</span><span class="dots"></span><span class="action">NAV</span></div>
+    <div class="row"><span class="item">COCKPIT LIGHTS, SCREEN BRIGHTNESS</span><span class="dots"></span><span class="action">AS RQRD</span></div>
+    <div class="row"><span class="item">RMP & ACP</span><span class="dots"></span><span class="action">SET AS RQRD</span></div>
+    <details class="checklist_notes"><summary>About ACP usage:</summary><p>To <b>LISTEN</b> to a channel: Release knob, turn to adjust volume.</p><p>To <b>TRANSMIT</b> on a channel: Select transmission key. <br>PA transmission key is "hold to talk". <br>If someone is calling on a channel, the corresponding transmission key will light up. Press Reset to mute the buzzer and then select the corresponding transmission key to answer. </p><p>About the INT/RAD switch: <b>RAD position enables PTT</b> for any selected transmission keys. <b>INT position enables a "always open" mic</b> for the interphone (oxy masks, ground crew).</p></details>
+
+    <br>
+    <div class="row"><span class="item">APU FIRE TEST</span><span class="dots"></span><span class="action">CHECKED</span></div>
+    <details class="checklist_notes"><summary>Note about APU Fire Test aural warning</summary><p>Do not perform fire test until Airbus power-up self-tests are done. Otherwise, aural warning will not be audible.</p></details>
+    <details class="checklist_notes"><summary>Note about delaying APU start</summary><p>Assuming that GPU is available, it is <b>recommended to delay APU start</b> to save fuel. <br><br>But, if you need A/C and ACU is not available, (or GPU does not work) -> turn on APU MASTER, wait 3 seconds, then start APU and 2 minutes later turn on APU BLEED.<br><br>APU LIMITATIONS: Do not turn on APU from batteries if they are below 25.5V. Ask airport crew for a GPU. Do not turn on APU BLEED if HP Ground Unit is connected.</p></details>
+    <br>
+    <hr>
+    <br>
+    <p style="font-size: 24px;">BEFORE WALKAROUND:</p>
+    <div class="row"><span class="item">ECAM RECALL</span><span class="dots"></span><span class="action">CHECKED</span></div>
+    <div class="info_box"><span class="info_icon">ⓘ</span><span class="info_text">- Check any warnings from ECAM on MEL/CDL.<br>- Check Technical Log and OEBs.<br>- AIRCRAFT ACCEPTANCE -> PERFORM</span></div>
+    <br>
+    <div class="row"><span class="item">ECAM CHECKS</span><span class="dots"></span><span class="action">DOORS OXY, HYD, ENG OIL</span></div>
+    <details class="checklist_notes"><summary>Open detailed explanation</summary>
+        <p>DOOR - check OXY PSI. If amber, check FCOM LIM-OXY Minimum Flight Crew Oxygen Pressure (see following screenshot):</p><p><img src="A320imgs/minimum_oxy_psi.png" style="width: 70%;"></p>
+        <p>HYD - check HYD QTY = If OAT +20ºC, fluid above normal is acceptable, else call maintenance.</p>
+        <p>ENG - check OIL QTY = should be at least 9.5 + 0.5 per flight hour (estimated consumption).</p>
+    </details>
+    <div class="row"><span class="item">SPEED BRAKES</span><span class="dots"></span><span class="action">RET & DISARM (check ECAM)</span></div>
+    <div class="row"><span class="item">FLAPS</span><span class="dots"></span><span class="action">UP (check ECAM)</span></div>
+    <div class="row"><span class="item">ACCU PRESS</span><span class="dots"></span><span class="action">Check GREEN</span></div>
+    <details class="checklist_notes"><summary>Note about RECHARGING ACCU</summary><p>Use yellow pump to recharge. <br>ATTENTION! Yellow and green systems require <b>ground crew clearance!</b></p></details>
+    <div class="row"><span class="item">ALT BRAKE</span><span class="dots"></span><span class="action">CHECKED</span></div>
+    <details class="checklist_notes"><summary>Open detailed explanation</summary>
+        <p>Confirm wheel chocks on position, then turn PARK BRK OFF.</p>
+        <p>Press the brake pedals while checking that PRESS builds symmetrically between 2000 and 2700 PSI, and decreases when pedals are released.</p>
+        <p>PARK BRK back on.</p>
+    </details>
+    <br>
+    <div class="row"><span class="item">EMERGENCY EQUIPMENT</span><span class="dots"></span><span class="action">CHECKED</span></div>
+    <details class="checklist_notes"><summary>Open detailed explanation</summary><p>Life Jackets, Smoke Hoods, Gloves, Axe, Portable Fire Extinguisher, Oxygen Masks (goggles attached), Escape Ropes</p></details>
+    <div class="row"><span class="item">RAIN REPELLENT QTY</span><span class="dots"></span><span class="action">CHECKED</span></div>
+    <div class="row"><span class="item">GEAR EXTN, pins and covers</span><span class="dots"></span><span class="action">CHECK STOWED</span></div>
+    <div class="row"><span class="item">CIRCUIT BREAKERS</span><span class="dots"></span><span class="action">CHECKED</span></div>
+</section>
+<script src="../script.js"></script>
+</body>
+<footer>
+    <p style="text-align: center;"><a class="boton_seccion" href="A320_walkaround.html">Go to Walkaround</a></p>
+    <p style="text-align: center;"><a class="boton_seccion" href="A320_ext_inspec.html">PREVIOUS SECTION</a><a class="boton_seccion" href="../A320_index.html">SECTIONS INDEX</a></p>
+    <p style="text-align: center; color: white; font-size: 18px;"><b>DO NOT USE FOR REAL LIFE FLIGHT - ONLY SIMULATOR!</b></p>
+</footer>
+</html>
+

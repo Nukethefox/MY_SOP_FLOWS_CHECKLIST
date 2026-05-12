@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A320</title>
+        <link rel="stylesheet" href="../styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>A320 KNOWLEDGE BASE</h1>
+        <details class="about_section">
+            <summary>SYSTEMS USAGE REMINDER</summary>
+            <div style="font-size: 20px; text-align: left; max-width: 90%; margin: 0 auto;">
+                <p>- APU: Little engine on the tail. Provides electricity and bleed air (for packs, ENG start).</p>
+                <p>- ELEC: Uses BATT, GPU, and APU/ENG generators.</p>
+                <p>- HYD: 3 pumps (YELLOW, GREEN, BLUE). Uses electricity. Used for flight surfaces, LDG gear, brakes.</p>
+                <p>- PNEUMATIC: Uses bleed air (from engines/APU/ground unit). Used for ENG start, packs, anti-ice, presurization.</p>
+                <p>- A/C & PRESURIZATION: Uses hot bleed air from engines (or ground unit). Packs cool it for cabin temp. Outflow valve used for cabin pressure.</p>
+                <p>- RAT: Provides ELEC and HYD on emergencies.</p>
+            </div>
+        </details>
+        <br>
+        <details class="about_section">
+            <summary>AIRCRAFT LIMITATIONS</summary>
+            <div style="font-size: 20px; text-align: left; max-width: 90%; margin: 0 auto;">
+                <p><b>Environmental Limits:</b></p>
+                <p>- MAX RWY ALT =  9200 ft</p>
+                <p>- MAX OPERATING ALT = 39100 ft</p>
+                <p>- MAX CROSSWIND = 38 kts (decreases with RWY COND: good to medium 29 kts, medium 25 kts, medium to poor 20 kts, poor 15 kts)</p>
+                <p>- Takeoff not recommended if some of the following are observed: wet ice, water on top of compacted snow, snow over ice</p>
+                <p>- MAX TAILWIND = 15 kts</p>
+                <p>- MAX WIND for Pax doors and Cargo doors = 65 kts and 40 kts respectively.</p>
+                <p><b>Maximum Operational Speed (VMO): 350 KIAS</b></p>
+                <p><b>Minimum Control Speed: 115 kts</b></p>
+                <p>(Minimum calibrated airspeed at which the aircraft can be controlled)</p>
+                <p><b>Max Flaps Speeds:</b></p>
+                <p>- FLAPS 1 = 230 kts</p>
+                <p>- FLAPS 1+F = 215 kts</p>
+                <p>- FLAPS 2 = 200 kts</p>
+                <p>- FLAPS 3 = 185 kts</p>
+                <p>- FLAPS FULL = 117 kts</p>
+                <p>- MAX ALT for slats/flaps = 20000 ft</p>
+                <p><b>Maximum Gear Speeds:</b></p>
+                <p>- Extended = 280 kts</p>
+                <p>- Extension and Retraction = 250 kts and 220 kts respectively</p>
+                <p>- MAX TYRE SPEED = 195 kts GS</p>
+                <p>- MAX TAXI SPEED = 20 kts (if TOW > 76000 kg)</p>
+                <p><b>Wipers and windows:</b></p>
+                <p>- MAX WIPER USAGE SPEED = 230 kts</p>
+                <p>- MAX COCKPIT WINDOW OPEN SPEED = 200 kts</p>
+                <p><b>About Pressurization, ventilation, conditioning:</b></p>
+                <p>- Do not exceed 20 minutes without AIR COND when passengers on board.</p>
+                <p>- Do not use HP Ground Unit at the same time with APU BLEED, nor ACU at the same time with Packs.</p>
+                <p><b>APU and Engines Limitations:</b></p>
+                <p>- MAX ALT for APU usage = 20000 ft (eng start and single pack), 15000 ft (dual pack), wing anti-ice from APU not permitted.</p>
+                <p>- If APU LOW OIL, it may still be used, but maintenance action is required within next 10 h of APU operation.</p>
+                <p>- MAX APU N = 105%</p>
+                <p>- MAX APU EGT = 1090ºC (start below 35000 ft), 1120ºC (start above 35000 ft), 675ºC (APU running)</p>
+                <p>- MAX ENG EGT = 950ºC for 5 mins on TOGA or FLEX (10 mins if 1 Eng Out), 915ºC for MCT, 725ºC for Eng Start</p>
+                <p>- MAX ENG N = 105% on N2, 104% on N1 (may be limited by ambient conditions or bleed config)</p>
+                <p>- MAX OIL TEMP = 140ºC, 155ºC for 15 mins transients</p>
+                <p>- MIN OIL TEMP = -40ºC for start, -10ºC for tkof</p>
+                <p><b>Temperature Limitations:</b></p>
+                <p>- JET A1 = between -43ºC and 54ºC</p>
+                <p>- Icing conditions expected if: TAT/OAT < 10ºC, or visible moisture (fog and clouds included)</p>
+                <p><b>Braking System Limitations:</b></p>
+                <p>- MAX BRAKES TEMP for TKOF = 300ºC (fans off)</p>
+                <p><b>Autopilot Limitations:</b></p>
+                <p>- MAX TAILWIND for AUTOLAND and ROLLOUT = 10 kt</p>
+            </div>
+        </details>
+        <br>
+        <details class="about_section">
+            <summary>WEIGHTS AND FUEL BASICS</summary>
+            <div style="font-size: 20px; text-align: left; max-width: 90%; margin: 0 auto;">
+                <p>- OEW / DOW: Operating Empty Weight / Dry Operating Weight = aircraft + equipment + crew.</p>
+                <p>- ZFW: Zero Fuel Weight = OEW + Payload (passengers, baggage, freight).</p>
+                <p>- ZFWCG: Zero Fuel Weight Center of Gravity = Center of gravity when aircraft fully loaded, except fuel. Appears as %MAC.</p>
+                <p>- GW: Gross Weight =  Real time aircraft total mass.</p>
+                <br>
+                <p>BLOCK FUEL: Total fuel before pushback/engine start.</p>
+                <p>Includes = TAXI OUT + TRIP + contingency + ALTN + final reserve + any extra.</p>
+                <br>
+                <p>- TOW: Takeoff Weight = Weight at takeoff (OEW + payload + Takeoff fuel (TRIP+CONT+ALTN+FINRES+EXTRA))</p>
+                <p>- LW: Landing Weight = Weight at landing (OEW + payload + fuel at landing)</p>
+                <br>
+                <div class="alert_box"><span class="alert_icon">⚠</span><span class="alert_text">ZFW, TOW and LW have also MAXIMUM VALUES that cannot be exceeded in order to protect aircraft's performance or structure (wings, landing gear). <br><b>These are MZFW, MTOW, MLW.</b></span></div>
+                <br>
+                <div class="info_box"><span class="info_icon">ⓘ</span><span class="info_text">You can easily obtain info for PAYLOAD & BLOCK FUEL on Simbrief.<br>Make sure OEW, MZFW, MTOW, MLW, Max Fuel & Pax Capacity are stated correctly! (check addon/sim documentation)</span></div>
+                <br>
+            </div>
+        </details>
+        <br>
+        <details class="about_section">
+            <summary>AUTOPILOT MODES</summary>
+            <div style="font-size: 20px; text-align: left; max-width: 90%; margin: 0 auto;">
+                <p>Push the knob <b>towards the aircraft</b> to give it control (managed).</p>
+                <p>- Managed CLB/DES: The autopilot will follow FMS Vertical Profile.</p>
+                <p>- Managed SPD/HDG: The autopilot will follow FMS Lateral Profile (programmed route) and speed computations.</p>
+                <p>These are the most preferable modes, as the FMS will take care about energy management & constraints.</p>
+                <p>------------</p>
+                <p>Pull the knob <b>towards you</b> to take control (selected).</p>
+                <p>- Selected SPD/HDG: The autopilot will NOT follow FMS indications.</p>
+                <p>- Open CLB/DES: The autopilot will take you straight to the desired altitud, adjusting rate depending on your speed (*), and will not follow altitude constraints.</p>
+                <p>- Vertical Speed mode: fine tunning for the climb/descent rate.</p>
+                <p>We will use OP CLB/DES when "we are not following the green line on the ND", or in other words, Vectors from ATC. <br>V/S Mode is the least preferable mode, since we have to be very careful with overspeed/stall. Note that sometimes we will have to use it (ATC asks for a descend rate)</p>
+                <ul>
+                    <li>Relation between speed and rate:</li>
+                    <li>Climb faster = more pitch up = less speed / climb slower = less pitch up = more speed.</li>
+                    <li>The opposite for descend: Descend faster = more pitch down = more speed / descend slower = less pitch down = less speed.</li>
+                </ul>
+            </div>
+        </details>
+        <br>
+        <details class="about_section">
+            <summary>OTHER BASIC VOCABULARY</summary>
+            <div style="font-size: 20px; text-align: left; max-width: 90%; margin: 0 auto;">
+                <p>Block time: time from chocks out to chocks in.</p>
+                <p>Taxi in/out: time taxiing.</p>
+                <p>Airborne time: time from takeoff to landing (remember to start chrono on takeoff).</p>
+                <br>
+                <p>TA: QNH -> STD</p>
+                <p>TL: STD -> QNH</p>
+                <p>MSA (Minimum Safe Altitude), MDA (Minimum Descent Altitude), DA (Decision Altitude), DH (Decision Height)</p>
+                <br>
+                <p>HDG vs TRK: Track is the "line" connecting point A to B on the ground. Heading is that same line with wind compensation.</p>
+            </div>
+        </details>
+        <br>
+        <details class="about_section">
+            <summary>RESOURCES USED TO CREATE THIS SOP</summary>
+            <div style="font-size: 20px; text-align: left; max-width: 90%; margin: 0 auto;">
+                <p>- A320 NORMAL PROCEDURES FROM <a style="color: white; font-style: italic;" href="https://theairlinepilots.com/forumarchive/a320/a320-normal-procedures.pdf" target="_blank">TheAirlinePilots</a> (version 20 march 2026)</p>
+                <br>
+                <p>YouTube Channels:</p>
+                <p>- <a style="color: white; font-style: italic;" href="https://www.youtube.com/@fsclips/videos" target="_blank">FSClips</a></p>
+                <p>- <a style="color: white; font-style: italic;" href="https://www.youtube.com/playlist?list=PLtFw-RsDhI84o5cEyNvnehjf_MNIIMNoS" target="_blank">A330 Driver</a></p>
+                <p>- <a style="color: white; font-style: italic;" href="https://www.youtube.com/@AirbusCockpitCoach/videos" target="_blank">Airbus Cockpit Coach</a></p>
+                <p>- <a style="color: white; font-style: italic;" href="https://www.youtube.com/@sammyh9542/videos" target="_blank">Sami_aviation</a></p>
+            </div>
+        </details>
+        <br>
+    </body>
+    <footer>
+        <hr>
+        <p style="text-align: center;"><a class="boton_seccion" href="../A320_index.html">A320 index</a></p>
+        <p style="text-align: center; color: white; font-size: 18px;"><b>DO NOT USE FOR REAL LIFE FLIGHT - ONLY SIMULATOR!</b></p>
+        <p style="text-align: center;"><a class="boton_seccion_special" href="default.asp">RTO</a><a class="boton_seccion_special" href="default.asp">DUAL ENG FAILURE</a><a class="boton_seccion_special" href="default.asp">GO AROUND</a><a class="boton_seccion_special" href="default.asp">EMERG DESCENT</a></p>
+    </footer>
+</html>
+

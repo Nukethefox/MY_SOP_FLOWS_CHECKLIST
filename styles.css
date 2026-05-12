@@ -1,0 +1,303 @@
+@font-face {
+  font-family: 'B612';
+  src: url('B612/B612-Regular.ttf') format('truetype');
+  font-weight: normal; /* O 400 */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variante BOLD (Negrita) */
+@font-face {
+  font-family: 'B612';
+  src: url('B612/B612-Bold.ttf') format('truetype');
+  font-weight: bold; /* O 700 */
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'B612', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.imagen_centrada {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link_imagen_titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.imagen_titulo {
+    width: 50%;
+}
+
+.boton_seccion:link, .boton_seccion:visited {
+    background-color: #003d91;
+    color: white;
+    font-weight: 800;
+    font-size: 24px;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-color: white;
+    border: 0.6px solid;
+    border-radius: 5px;
+}
+
+.boton_seccion:hover, .boton_seccion:active {
+    background-color: #0261e6;
+}
+
+.boton_seccion_special:link, .boton_seccion_special:visited {
+    background-color: #ff0000;
+    color: white;
+    font-weight: 800;
+    font-size: 24px;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-color: white;
+    border: 0.6px solid;
+    border-radius: 5px;
+}
+
+.boton_seccion_special:hover, .boton_seccion_special:active {
+    background-color: #ff6600;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.checklist {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.item {
+    white-space: nowrap;
+}
+
+.dots {
+    flex: 1;
+    border-bottom: 2px dashed white;
+    margin: 0 10px;
+}
+
+.action {
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    accent-color: #0261e6;
+}
+
+#nextSectionButton {
+    display: none;
+}
+
+.checklist_notes {
+    max-width: 700px;
+    margin: 5px 0 15px 0;
+    font-size: 18px;
+    color: #cecece;
+}
+
+/* quitar flecha nativa */
+.checklist_notes summary {
+    cursor: pointer;
+    list-style: none;
+    font-style: italic;
+}
+
+/* flecha personalizada */
+.checklist_notes summary::before {
+    content: "▶ ";
+    color: rgb(0, 132, 255);
+    font-weight: bold;
+}
+
+/* cuando está abierto */
+.checklist_notes[open] summary::before {
+    content: "▼ ";
+}
+
+.checklist_notes p,
+.checklist_notes ul {
+    margin-left: 20px;
+}
+
+.alert_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffd500;
+    color: black;
+    padding: 10px 14px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.alert_icon {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+hr {
+    border: 2px solid rgb(0, 132, 255);
+}
+
+.hr_caution {
+    border: 2px solid rgb(255, 38, 0);
+}
+
+.info_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    padding: 10px 14px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.info_icon {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+/* quitar flecha nativa */
+.about_section summary {
+    cursor: pointer;
+    list-style: none;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+/* ocultar flecha en algunos navegadores */
+.about_section summary::-webkit-details-marker {
+    display: none;
+}
+
+/* flecha personalizada */
+.about_section summary::before {
+    content: "▶ ";
+    color: rgb(0, 132, 255);
+    font-weight: bold;
+}
+
+/* cuando está abierto */
+.about_section[open] summary::before {
+    content: "▼ ";
+}
+
+.sticky_note {
+    position: sticky;
+    top: 15px;
+    z-index: 100;
+}
+
+.calc_container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 12px; 
+    align-items: flex-end; 
+    background-color: #1a1a1a; 
+    padding: 15px; 
+    border: 1px solid #003d91; 
+    border-radius: 5px; 
+    margin-top: 15px;
+}
+
+.calc_group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calc_label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #0261e6;
+    text-transform: uppercase;
+}
+
+.calc_input, .calc_select {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 6px;
+    font-family: 'B612', sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.calc_input:focus, .calc_select:focus {
+    outline: none;
+    border-color: #0261e6;
+}
+
+.calc_button {
+    background-color: #003d91;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 15px;
+    font-family: 'B612', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.calc_button:hover {
+    background-color: #0261e6;
+}
+
+.calc_result {
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #00ff00;
+    font-size: 1.1em;
+}
+
+.one_line_detail {
+    font-style: italic;
+    font-size: 18px;
+    color: #cecece;
+}

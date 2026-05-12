@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A320 DESCENT</title>
+        <link rel="stylesheet" href="../styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h1>A320 DESCENT</h1>
+        <section class="checklist">
+            <details class="checklist_notes">
+                <summary>Descend start calculation:</summary>
+                <p>In addition to the TOD symbol on the ND, we can use a calculation to determine "how much distance we need when we have to descend a certain altitude." We'll use a rule of thumb for a 3° descent (thousands of altitude times 3 + safety margin).<br><br>For a quick calculation, insert data below according to your actual speed and altitude, desired speed and altitude when reaching the target waypoint, and the wind from the ND.</p>
+                <div class="calc_container">
+                    <div class="calc_group"><label class="calc_label">CURRENT ALT</label><input type="number" id="currAlt" class="calc_input" placeholder="32000" style="width: 80px;"></div>
+                    <div class="calc_group"><label class="calc_label">TARGET ALT</label><input type="number" id="tgtAlt" class="calc_input" placeholder="7000" style="width: 80px;"></div>
+                    <div class="calc_group"><label class="calc_label">CURRENT SPD</label><input type="number" id="currSpd" class="calc_input" placeholder="290" style="width: 65px;"></div>
+                    <div class="calc_group"><label class="calc_label">TARGET SPD</label><input type="number" id="tgtSpd" class="calc_input" placeholder="220" style="width: 65px;"></div>
+                    <div class="calc_group"><label class="calc_label">WIND</label><select id="windType" class="calc_select"><option value="tail">Tailwind</option><option value="head">Headwind</option></select></div>
+                    <div class="calc_group"><label class="calc_label">WIND KTS</label><input type="number" id="windKts" class="calc_input" placeholder="50" style="width: 55px;"></div>
+                    <button onclick="calculateTOD()" class="calc_button">CALCULATE</button>
+                    <div id="todResult" class="calc_result">Start descending at -- NM from target waypoint</div>
+                </div>
+                <p>F-PLN > LAT REV > FIX INFO: As a reference for TOD, targeting the waypoint we used for the calculator above, we can insert a circle where its radius matches the calculator's result.</p>
+                <br>
+                <p>A quicker rule of thumb, instead of doing the math, is to look at the altitude in meters on the ISIS. We omit the last two digits and the resulting number is the same as calculating "our total altitude multiplied by 3". Finally, we can simply add 10 NM as a margin. <br>For example, let's imagine we are at FL150. ISIS would indicate 4572 m. This means we need 55 NM (safety margin added) to lose 15000 feet.</p>
+            </details>
+            <br>
+            <details class="checklist_notes"><summary>Helpful tools for descend:</summary>
+                <p>MCDU PROG PAGE -> BRG/DIST: As a refference, we can insert the airport (ICAO+RWY, e.g LEBL24R). <br>Here we also get the VERTICAL DEVIATION.</p>
+                <p>MCDU PERF DES: Includes a prediction on your descend.</p>
+            </details>
+            <br>
+            <details class="checklist_notes"><summary>Descend management:</summary>
+                <p>- MANAGED DES: will follow constraints and manage speed/rate itself. Preffered mode.<br>- OP DES: will not follow CSTR, selected speed may be needed to control rate. Use when following vectors.<br>- V/S MODE: Least preffered mode. Use if asked by ATC. Monitor speed at all times, using selected.</p>
+                <p>OP DES MANAGEMENT:<br>- If above profile: increase speed + use speed brake if needed.<br>- If below profile: use V/S at low rate to catch profile again.</p>
+            </details>
+            <br>
+            <div class="row"><span class="item">WING A/ICE</span><span class="dots"></span><span class="action">ON only if visible icing</span></div>
+            <div class="row"><span class="item">ENG ANTI ICE</span><span class="dots"></span><span class="action">ON if TAT <10ºC & visible moisture</span></div>
+            <br>
+            <p style="font-size: 22px;"><b>10.000 FT CHECKS (AAL):</b></p>
+            <div class="row"><span class="item">LANDING LIGHTS</span><span class="dots"></span><span class="action">ON</span></div>
+            <div class="row"><span class="item">SEAT BELTS SIGNS</span><span class="dots"></span><span class="action">ON</span></div>
+            <div class="row"><span class="item">EFIS</span><span class="dots"></span><span class="action">FD, LS, CSTR, RANGE, MODE</span></div>
+            <div class="row"><span class="item">MCDU PROG</span><span class="dots"></span><span class="action">CHECK ACCUR HIGH</span></div>
+            <div class="row"><span class="item">ENG MODE SEL</span><span class="dots"></span><span class="action">IGN if water on rwy, heavy rain/turb</span></div>
+            <br>
+            <div class="info_box"><span class="info_icon">ⓘ</span><span class="info_text">AT TRANSITION LEVEL or ATC CLEARANCE -> QNH</span></div>
+            <br>
+            <div class="row" style="align-items: center; justify-content: center;"><img src="A320imgs/CHKLIST_APP.png"></div>
+            <br>
+        </section>
+        <script src="../script.js"></script>
+    </body>
+    <footer>
+        <p style="text-align: center;"><a class="boton_seccion" href="A320_approach.html">Go to Approach - ILS</a></p>
+        <p style="text-align: center;"><a class="boton_seccion" href="A320_arr_brief.html">PREVIOUS SECTION</a><a class="boton_seccion" href="../A320_index.html">SECTIONS INDEX</a></p>
+        <p style="text-align: center; color: white; font-size: 18px;"><b>DO NOT USE FOR REAL LIFE FLIGHT - ONLY SIMULATOR!</b></p>
+    </footer>
+</html>

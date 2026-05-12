@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A320 DESCENT PREPARATION</title>
+        <link rel="stylesheet" href="../styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h1>A320 DESCENT PREPARATION</h1>
+        <section class="checklist">
+            <div class="row"><span class="item">ECAM STS</span><span class="dots"></span><span class="action">CHECKED</span></div>
+            <div class="row"><span class="item">NAV CHARTS</span><span class="dots"></span><span class="action">PREPARE STAR, INIT APP, APP</span></div>
+            <div class="row"><span class="item">LATEST METAR/ATIS</span><span class="dots"></span><span class="action">OBTAIN</span></div>
+            <div class="row"><span class="item">QNH</span><span class="dots"></span><span class="action">DIAL and go back to STD</span></div>
+            <br>
+            <div class="row"><span class="item">RWY IN USE</span><span class="dots"></span><span class="action">DETERMINE</span></div>
+            <div class="info_box"><span class="info_icon">ⓘ</span><span class="info_text">Remember: we tried to predict <b>RWY IN USE</b> earlier, when creating the FPL.<br>Compare your prediction using newest METAR (or ATIS if ATC is AVAIL).</span></div>
+            <br>
+            <div class="row"><span class="item">LANDING PERF</span><span class="dots"></span><span class="action">COMPUTE</span></div>
+            <div class="info_box"><span class="info_icon">ⓘ</span><span class="info_text">Just like with the TKOF PERF, use your aircraft's own calculation system (EFB, separate panel...). If not available, you can use <a href="https://dispatch.simbrief.com/tools" target="_blank" style="color: white;">SimBrief's PERF TOOL</a>.</span></div>
+            <br>
+            <details class="checklist_notes"><summary>How to calculate LDW?</summary><p>It is better to calculate instead of usind the EST LDW from the flight plan. You can use this simple method:<br>1. FOB - DEST EFOB<br>2. GW - the result above<br>3. add 200kg just in case</details>
+            <details class="checklist_notes"><summary>FLAPS 3 or FULL?</summary><p>Flaps 3 is preffered since it saves fuel, but...</p><p>It is better to use FLAPS FULL in the following conditions:<br>- Turbulent, windshear or tailwind conditions are expected.<br>- Short runways.<br>- GS greater than 3º.<br>- Brakes will not have enough time to cool during turnaround (flaps 3 = landing a bit faster = more braking action)<br>- Remember, when using flaps 3, nose pitch will be slightly higher, so that would not be helpful on low visibility. Also for this reason, on flaps 3, less back pressure is required on the sidestick for flare.</p></details>
+            <br>
+            <div class="row"><span class="item">MCDU F-PLN</span><span class="dots"></span><span class="action">CHECK ARR RWY, STAR, CSTR...</span></div>
+            <div class="row"><span class="item">MCDU RAD-NAV</span><span class="dots"></span><span class="action">TUNE NECESSARY FREQS (APCH)</span></div>
+            <div class="row"><span class="item">MCDU PROG</span><span class="dots"></span><span class="action">CHECK GPS PRIM. ACCUR HIGH</span></div>
+            <div class="row"><span class="item">MCDU PERF DES</span><span class="dots"></span><span class="action">CHECK MANAGED SPEED</span></div>
+            <div class="row"><span class="item">MCDU PERF APPR</span><span class="dots"></span><span class="action">SET ALL DATA</span></div>
+            <br>
+            <details class="checklist_notes"><summary>Detailed explanation:</summary><p>- QNH, TEMP, WIND from METAR<br>- TRANS LEVEL: If charts say "by ATC", but ATC not avail, use following method as a generic example:<br>500ft above TA if QNH between 1032 and 1050<br>1000ft above TA if QNH between 1014 and 1031<br>1500ft above TA if QNH between 996 and 1013<br>2000ft above TA if QNH between 978 and 995<br>2500ft above TA if QNH between 960 and 977<br>3000ft above TA if QNH between 942 and 959<br><br>- BARO vs RADIO: Radio altimeter is only used on CATII/III. For CATI/NPA Baro is used. Check charts. <br>A320/A319 are CAT C, and A321 is CAT D if MLW between 75.5T and 77.8T, otherwise C as well.<br><br>- Finally select LDG CONF.</p></details>
+            <br>
+            <div class="row"><span class="item">MCDU PERF GA</span><span class="dots"></span><span class="action">SET ENG OUT ACC</span></div>
+            <p class="one_line_detail">ENG OUT ACC will be the MSA or the MISSED APCH altitude, whichever is lower.</p>
+            <div class="row"><span class="item">MCDU FUEL PRED</span><span class="dots"></span><span class="action">CHECK EXTRA/TIME</span></div>
+            <div class="row"><span class="item">MCDU SEC F-PLN</span><span class="dots"></span><span class="action">COPY ACTIVE</span></div>
+            <p class="one_line_detail">A useful usage for the secondary flight plan would be to prepare any approach change/parallel runways...</p>
+            <div class="row"><span class="item">MCDU SEC PERF APPR</span><span class="dots"></span><span class="action">SET AS RQRD</span></div>
+            <br>
+            <hr>
+            <br>
+            <div class="row"><span class="item">AUTO BRAKE</span><span class="dots"></span><span class="action">SET AS RQRD</span></div>
+            <div class="row"><span class="item">GPWS FLAPS 3</span><span class="dots"></span><span class="action">AS RQRD</span></div>
+        </section>
+        <script src="../script.js"></script>
+    </body>
+    <footer>
+        <p style="text-align: center;"><a class="boton_seccion" href="A320_arr_brief.html">Go to Arrival Briefing</a></p>
+        <p style="text-align: center;"><a class="boton_seccion" href="A320_cruise.html">PREVIOUS SECTION</a><a class="boton_seccion" href="../A320_index.html">SECTIONS INDEX</a></p>
+        <p style="text-align: center; color: white; font-size: 18px;"><b>DO NOT USE FOR REAL LIFE FLIGHT - ONLY SIMULATOR!</b></p>
+    </footer>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A320 FLIGHT PREPARATION</title>
+        <link rel="stylesheet" href="../styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+<h1>A320 FLIGHT PREPARATION</h1>
+
+<section class="checklist_container">
+<section class="checklist">
+    <div class="row"><span class="item">AIRPORT FROM/TO</span><span class="dots"></span><span class="action">DECIDE</span></div>
+    <div class="row"><span class="item">SIMBRIEF FPL</span><span class="dots"></span><span class="action">CREATE</span></div>
+    <br>
+    <div class="info_box"><span class="info_icon">ⓘ</span><span class="info_text">
+        <p>
+            <b>How to predict RWY IN USE:</b>
+            <br>1. Search for preferred runway in charts ("Runway Usage", usually under Airport Briefing or Noise Abatement).
+            <br><br>2. If flying offline or ATIS/ATC not available, se METAR for departure airport and TAF for arrival airport (<a href="https://metar-taf.com/metar/" target="_blank" style="color: white;">metar-taf visual decoder</a>).
+        </p></span></div>
+    <br>
+    <p class="one_line_detail">Link to my <a href="https://nukethefox.github.io/MY-EFB/index.html" target="_blank" style="color: #cecece;">OFP Dashboard</a> to get a breakdown of FUEL, WEIGHTS & ROUTE.</p>
+    <br>
+    <div class="row"><span class="item">CHARTS</span><span class="dots"></span><span class="action">READY</span></div>
+    <div class="row"><span class="item">SIM</span><span class="dots"></span><span class="action">COLD & DARK, REAL WX</span></div>
+    <br>
+    <div class="alert_box"><span class="alert_icon">⚠</span><span class="alert_text">When obtaining FUEL (BLOCK) & WEIGHTS (PAYLOAD) from SimBrief, make sure OEW, MZFW, MTOW, MLW, Max Fuel & Pax Capacity <b>are correctly stated on SimBrief</b>(airframes menu) according to your addon/sim documentation!</span></div>
+    <br>
+    <details class="checklist_notes" style="font-size: 18px;"><summary><b>AIRBUS BULLETINS:</b></summary>
+        <p>1. Let's say we are on a very short flight. We are still climbing to our desired CRZ ALT and ATC tells us "descend when ready". So, to not forget, we put our cleared descend altitude on the FCU, without pushing the knob yet, because we want to climb a bit more. When doing this, the aircraft enters a "SPEED + V/S MODE", and will keep climbing even past our CRZ FL.<br>It is important to remember that we selected our cleared altitude on the FCU, but we didn't push the knob.</p>
+        <p>2. If you don't reach your CRZ FL due to ATC or WX or traffic restrictions, and you don't adjust it in MCDU PROG PAGE in time, when you try to begin your descent, the aircraft will think you're still in climb mode ("we haven't reached CRZ yet"). To fix this, while descending, go to MCDU PROG PAGE and enter a lower flight level than the current one, so the aircraft realizes you've already passed cruise.</p>
+        <p>3. Imagine that you are on approach, flying vectors, and you're told "cleared for ILS", so you actívate APPR and AP1+2. But since we were flying vectors, the aircraft will think "oh but we haven't passed that waypoint yet", so when the ILS is intercepted, the aircraft will start doind weird things (e.g. it will want to fly to a waipoint that's far from the ILS because "we missed it" because of the vectors). So, to solve that, go to MCDU DIR PAGE and select a waypoint that's actually on the "intercept course". But remember to ARM the APPROACH!</p>
+        <p>4. When flying MANAGED SPEED on a <u>high CI</u>, at some point we will be <u>too close to over-speed</u>. To solve that, switch to selected speed, or set a lower managed speed on the PERF PAGE.</p>
+        <p>5. If approaching cruise flight level at a high rate, and there is traffic above it, TA/RA could be triggered, because <u>TCAS does not count the imminent level off</u>. If approaching cleared level too fast, go into V/S MODE and reduce the climb rate. Same for descent.</p>
+        <p>6. If you are on approach and the aircraft is flying at a speed different than the one you told it to, don't worry, the aircraft itself is compensating for the wind on the ground.</p>
+    </details>
+</section>
+</section>
+
+
+<script src="../script.js"></script>
+
+
+</body>
+<footer>
+    <p style="text-align: center;"><a class="boton_seccion" href="A320_ext_inspec.html">Start with Safety Exterior Inspection</a></p>
+    <p style="text-align: center;"><a class="boton_seccion" href="../A320_index.html">SECTIONS INDEX</a></p>
+    <p style="text-align: center; color: white; font-size: 18px;"><b>DO NOT USE FOR REAL LIFE FLIGHT - ONLY SIMULATOR!</b></p>
+</footer>
+</html>
+
